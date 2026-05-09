@@ -1,0 +1,150 @@
+services:
+  # ------------------------------------------------------------
+  # API Gateway (Node.js)
+  # ------------------------------------------------------------
+  gateway:
+    build:
+      context: ./gateway
+      dockerfile: Dockerfile
+    container_name: qs_gateway
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - AUTH_SERVICE_URL=http://auth-service:3001
+      - PLACE_SERVICE_URL=http://place-service:3002
+      - NOTIFICATION_SERVICE_URL=http://notification-service:80
+    volumes:
+      - ./gateway:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - auth-service
+      - place-service
+      - notification-service
+
+  # ------------------------------------------------------------
+  # Auth Service (Node.js)
+  # ------------------------------------------------------------
+  auth-service:
+    build:
+      context: ./services/auth-service
+      dockerfile: Dockerfile
+    container_name: qs_auth_service
+    ports:
+      - "3001:3001"
+    env_file:
+      - ./services/auth-service/.env
+    volumes:
+      - ./services/auth-service:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      mysql:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_started
+
+  # ------------------------------------------------------------
+  # Place Service (Node.js)
+  # ------------------------------------------------------------
+  place-service:
+    build:
+      context: ./services/place-service
+      dockerfile: Dockerfile
+    container_name: qs_place_service
+    ports:
+      - "3002:3002"
+    env_file:
+      - ./services/place-service/.env
+    volumes:
+      - ./services/place-service:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      mysql:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_started
+
+  # ------------------------------------------------------------
+  # Notification Service (PHP CI4)
+  # ------------------------------------------------------------
+  notification-service:
+    build:
+      context: ./services/notification-service
+      dockerfile: Dockerfile
+    container_name: qs_notification_service
+    ports:
+      - "8080:80"
+    env_file:
+      - ./services/notification-service/.env
+    volumes:
+      - ./services/notification-service:/var/www/html
+      - notification_vendor:/var/www/html/vendor
+    depends_on:
+      mysql:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_started
+
+  # ------------------------------------------------------------
+  # Notification Service Consumer Worker
+  # ------------------------------------------------------------
+  notification-worker:
+    build:
+      context: ./services/notification-service
+      dockerfile: Dockerfile
+    container_name: qs_notification_worker
+    command: php spark rabbitmq:consume
+    env_file:
+      - ./services/notification-service/.env
+    volumes:
+      - ./services/notification-service:/var/www/html
+      - notification_vendor:/var/www/html/vendor
+    depends_on:
+      mysql:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_started
+      notification-service:
+        condition: service_started
+
+  # ------------------------------------------------------------
+  # MySQL Database
+  # ------------------------------------------------------------
+  mysql:
+    image: mysql:8.0
+    container_name: qs_mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./db-init:/docker-entrypoint-initdb.d
+      - ./services:/opt/services # Mount to read schema.sql files
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ------------------------------------------------------------
+  # RabbitMQ
+  # ------------------------------------------------------------
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: qs_rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  mysql_data:
+  notification_vendor:
