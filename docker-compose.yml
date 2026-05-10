@@ -6,7 +6,7 @@ services:
     build:
       context: ./gateway
       dockerfile: Dockerfile
-    container_name: qs_gateway
+    container_name: n2410511045_qs_gateway
     ports:
       - "33000:3000"
     environment:
@@ -29,7 +29,7 @@ services:
     build:
       context: ./services/auth-service
       dockerfile: Dockerfile
-    container_name: qs_auth_service
+    container_name: n2410511045_qs_auth_service
     ports:
       - "33001:3001"
     env_file:
@@ -50,7 +50,7 @@ services:
     build:
       context: ./services/place-service
       dockerfile: Dockerfile
-    container_name: qs_place_service
+    container_name: n2410511045_qs_place_service
     ports:
       - "33002:3002"
     env_file:
@@ -71,7 +71,7 @@ services:
     build:
       context: ./services/notification-service
       dockerfile: Dockerfile
-    container_name: qs_notification_service
+    container_name: n2410511045_qs_notification_service
     ports:
       - "38080:80"
     env_file:
@@ -92,7 +92,7 @@ services:
     build:
       context: ./services/notification-service
       dockerfile: Dockerfile
-    container_name: qs_notification_worker
+    container_name: n2410511045_qs_notification_worker
     command: php spark rabbitmq:consume
     env_file:
       - ./services/notification-service/.env
@@ -112,7 +112,7 @@ services:
   # ------------------------------------------------------------
   mysql:
     image: mysql:8.0
-    container_name: qs_mysql
+    container_name: n2410511045_qs_mysql
     ports:
       - "33306:3306"
     environment:
@@ -132,7 +132,7 @@ services:
   # ------------------------------------------------------------
   rabbitmq:
     image: rabbitmq:3-management
-    container_name: qs_rabbitmq
+    container_name: n2410511045_qs_rabbitmq
     ports:
       - "35672:5672"
       - "35673:15672"
