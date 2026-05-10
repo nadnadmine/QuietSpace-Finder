@@ -2,6 +2,12 @@
 
 QuietSpace Finder adalah backend berbasis service untuk membantu pengguna menemukan, menyimpan, melaporkan, dan menerima notifikasi terkait tempat belajar atau bekerja yang nyaman dan tenang. Proyek ini disusun untuk Tugas 9 PPLBS dengan arsitektur API Gateway, beberapa service domain, database terpisah, autentikasi JWT, dan komunikasi asinkron menggunakan RabbitMQ.
 
+## Identitas Mahasiswa
+- **Nama**: Nadia Jasmine Aulia
+- **NIM**: 2410511045
+- **Kelas**: A
+- **Mata Kuliah**: Pembangunan Perangkat Lunak Berorientasi Service
+
 ## Milestone
 
 | Item | Nilai |
