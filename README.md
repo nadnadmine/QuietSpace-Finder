@@ -8,15 +8,15 @@ QuietSpace Finder adalah backend berbasis service untuk membantu pengguna menemu
 | --- | --- |
 | Pertemuan | 9 |
 | Versi milestone | `v0.9.0-tugas9` |
-| Status | Siap diuji lokal dengan Docker Compose |
-| Gateway lokal | `http://localhost:3000` |
-| Target deploy | Server LeADS via Git clone |
+| Status | Berhasil di-deploy di server LeADS |
+| Gateway (LeADS) | `http://103.147.92.134.sslip.io:33000` |
+| RabbitMQ Mgmt  | `http://103.147.92.134.sslip.io:35673` |
 
 ## Kesesuaian Ketentuan Tugas 9
 
 | Ketentuan | Implementasi di proyek |
 | --- | --- |
-| API Gateway sebagai satu entry point | `gateway` pada port `3000`, meneruskan request ke service internal |
+| API Gateway sebagai satu entry point | `gateway` pada port `33000` (host LeADS), meneruskan request ke service internal |
 | Minimal satu service autentikasi | `auth-service` dengan JWT, refresh token, role user, moderator, admin |
 | Minimal dua service/domain | `auth-service`, `place-service`, `notification-service` |
 | Database service | MySQL dengan database `quietspace_auth`, `quietspace_places`, `quietspace_notifications` |
@@ -112,10 +112,10 @@ qs_rabbitmq
 Cek health:
 
 ```powershell
-Invoke-WebRequest -UseBasicParsing http://localhost:3000/health
-Invoke-WebRequest -UseBasicParsing http://localhost:3001/health
-Invoke-WebRequest -UseBasicParsing http://localhost:3002/health
-Invoke-WebRequest -UseBasicParsing http://localhost:8080
+curl http://103.147.92.134.sslip.io:33000/health
+curl http://103.147.92.134.sslip.io:33001/health
+curl http://103.147.92.134.sslip.io:33002/health
+curl http://103.147.92.134.sslip.io:38080/health
 ```
 
 Dashboard RabbitMQ:
@@ -444,8 +444,9 @@ cp gateway/.env.example gateway/.env
 cp services/auth-service/.env.example services/auth-service/.env
 cp services/place-service/.env.example services/place-service/.env
 cp services/notification-service/.env.example services/notification-service/.env
-docker-compose up -d --build
-docker-compose ps
+# Gunakan 'docker compose' (V2) untuk menghindari error di server LeADS
+docker compose up -d --build
+docker compose ps
 ```
 
 Jika file `.env.example` belum dibuat, siapkan `.env` secara manual di server berdasarkan daftar variabel pada bagian Environment.
