@@ -1,0 +1,7 @@
+{
+    "require": {
+        "codeigniter4/framework": "^4.7",
+        "php-amqplib/php-amqplib": "^2.8",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
