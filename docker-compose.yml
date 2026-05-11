@@ -79,6 +79,7 @@ services:
     volumes:
       - ./services/notification-service:/var/www/html
       - notification_vendor:/var/www/html/vendor
+      - notification_writable:/var/www/html/writable
     depends_on:
       mysql:
         condition: service_healthy
@@ -99,6 +100,7 @@ services:
     volumes:
       - ./services/notification-service:/var/www/html
       - notification_vendor:/var/www/html/vendor
+      - notification_writable:/var/www/html/writable
     depends_on:
       mysql:
         condition: service_healthy
@@ -148,3 +150,4 @@ services:
 volumes:
   mysql_data:
   notification_vendor:
+  notification_writable:
