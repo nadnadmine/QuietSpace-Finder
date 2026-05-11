@@ -88,16 +88,45 @@ app.use((req, res, next) => {
 
 // Health Check Endpoint
 app.get('/health', async (req, res) => {
-    // In a real scenario, we'd ping upstream services. 
-    // For now, we'll return a static healthy response per the spec.
+    // Basic ping check for upstream services with timeout
+    const checkService = async (url) => {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 second timeout
+
+        try {
+            const start = Date.now();
+            const response = await fetch(`${url}/health`, { 
+                method: 'GET',
+                signal: controller.signal
+            });
+            clearTimeout(timeoutId);
+            return {
+                status: response.ok ? "healthy" : "degraded",
+                response_time_ms: Date.now() - start,
+                url
+            };
+        } catch (err) {
+            clearTimeout(timeoutId);
+            return { 
+                status: "unhealthy", 
+                error: err.name === 'AbortError' ? 'Timeout' : err.message, 
+                url 
+            };
+        }
+    };
+
     res.status(200).json({
-        message: "All services healthy",
+        message: "All services status",
         data: {
-            gateway: { status: "healthy", timestamp: new Date().toISOString() },
+            gateway: { 
+                status: "healthy", 
+                timestamp: new Date().toISOString(),
+                uptime_seconds: Math.floor(process.uptime())
+            },
             services: {
-                "auth-service": { status: "healthy", url: AUTH_SERVICE },
-                "place-service": { status: "healthy", url: PLACE_SERVICE },
-                "notification-service": { status: "healthy", url: NOTIFICATION_SERVICE }
+                "auth-service": await checkService(AUTH_SERVICE),
+                "place-service": await checkService(PLACE_SERVICE),
+                "notification-service": await checkService(NOTIFICATION_SERVICE)
             }
         },
         error: null

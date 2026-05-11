@@ -34,5 +34,8 @@ COPY . .
 
 RUN composer dump-autoload --optimize
 
+# Ensure writable directory is writable by Apache
+RUN chown -R www-data:www-data writable && chmod -R 775 writable
+
 # Make spark executable
 RUN chmod +x spark

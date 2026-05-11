@@ -7,6 +7,23 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 
+$routes->get('ping', function() {
+    return "pong";
+});
+
+$routes->get('health', function() {
+    return response()->setJSON([
+        'message' => 'Notification Service is up and running',
+        'data' => [
+            'status' => 'healthy',
+            'timestamp' => date('c'),
+            'php_version' => PHP_VERSION,
+            'environment' => env('CI_ENVIRONMENT', 'production')
+        ],
+        'error' => null
+    ]);
+});
+
 $routes->group('api', ['filter' => \App\Filters\JWTAuthFilter::class], static function ($routes) {
     $routes->get('notifications', 'Notifications::index');
     $routes->get('notifications/preferences', 'Notifications::getPreferences');
