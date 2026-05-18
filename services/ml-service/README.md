@@ -6,7 +6,7 @@ Dibuat khusus untuk memenuhi tugas **Pertemuan 11 — Intelligent Service** pada
 
 ---
 
-## 👤 Identitas Mahasiswa
+## Identitas Mahasiswa
 
 | Item | Detail |
 |---|---|
@@ -16,7 +16,7 @@ Dibuat khusus untuk memenuhi tugas **Pertemuan 11 — Intelligent Service** pada
 
 ---
 
-## 🏛️ Arsitektur Integrasi Microservices
+## Arsitektur Integrasi Microservices
 
 Layanan ML Service ini bertindak sebagai kontributor kecerdasan buatan (*intelligent service*) yang terintegrasi secara modular ke dalam ekosistem **QuietSpace Finder** melalui API Gateway dan Express.js:
 
@@ -35,7 +35,7 @@ Layanan ML Service ini bertindak sebagai kontributor kecerdasan buatan (*intelli
 
 ---
 
-## 📊 Dataset & Fitur Model
+## Dataset & Fitur Model
 
 Sistem ML Service ini dirancang tangguh dengan mendukung **dua jenis dataset** secara otomatis:
 
@@ -57,7 +57,7 @@ Sistem ML Service ini dirancang tangguh dengan mendukung **dua jenis dataset** s
 
 ---
 
-## ⚙️ Cara Menjalankan Secara Lokal (Windows / Linux / macOS)
+## Cara Menjalankan Secara Lokal (Windows / Linux / macOS)
 
 ### 1. Prasyarat Sistem
 * Python 3.11 s.d. 3.13
@@ -82,7 +82,7 @@ venv\Scripts\activate
 
 > [!TIP]
 > **Mengatasi WinError 206 (Batas Panjang Path Windows):**
-> Jika Anda berada di direktori Windows yang sangat dalam dan mendapatkan error saat menginstal NumPy/Pandas, cukup nonaktifkan virtual environment (`deactivate`) dan jalankan instalasi secara global karena dependency utama sudah terinstal di environment global sistem Anda.
+> Jika berada di direktori Windows yang sangat dalam dan mendapatkan error saat menginstal NumPy/Pandas, cukup nonaktifkan virtual environment (`deactivate`) dan jalankan instalasi secara global karena dependency utama sudah terinstal di environment global sistem.
 
 ```bash
 # 3. Install Dependency (Secara otomatis mengunduh binary wheel untuk Python 3.13)
@@ -167,7 +167,7 @@ docker-compose up -d --build ml-service
 
 ## 🛡️ Integrasi Ketahanan Sistem (Circuit Breaker)
 
-Sesuai spesifikasi tugas, **`place-service`** (Express.js) memanggil endpoint `/predict` dari ML-Service secara asinkron. Di dalam [mlService.js](file:///c:/Users/Nadia%20jasmine%20aulia/OneDrive/Desktop/TUGAS%20KULIAH/SEMESTER%204/Pembangunan%20Perangkat%20Lunak%20Berorientasi%20Service/QuietSpace-Finder/services/place-service/src/services/mlService.js) telah disematkan fitur **Circuit Breaker** sederhana:
+Sesuai spesifikasi tugas, **`place-service`** (Express.js) memanggil endpoint `/predict` dari ML-Service secara asinkron. Di dalam [mlService.js](../place-service/src/services/mlService.js) telah disematkan fitur **Circuit Breaker** sederhana:
 * **Deteksi Kegagalan**: Jika ML Service mati / bermasalah sebanyak **3 kali berturut-turut**, sirkuit akan berubah menjadi **OPEN**.
 * **Proteksi Bottleneck**: Selama sirkuit **OPEN**, Express.js tidak akan mengirim request ke Python melainkan langsung menyajikan data dengan label *fallback* aman secara instan.
 * **Pemulihan Otomatis**: Setelah masa cooldown **30 detik** berlalu, sirkuit akan menjadi **HALF-OPEN** untuk menguji kembali kesehatan koneksi ML Service secara otomatis.
