@@ -234,3 +234,24 @@ exports.deleteUser = async (req, res) => {
         conn.release();
     }
 };
+
+exports.getAllUsers = async (req, res) => {
+    try {
+        const [rows] = await db.execute(
+            `SELECT u.id, u.username, u.email, u.display_name, u.avatar_url, u.bio, 
+                    r.name as role, u.is_active, u.is_email_verified, u.created_at
+             FROM users u 
+             JOIN roles r ON u.role_id = r.id
+             WHERE u.deleted_at IS NULL`
+        );
+
+        res.status(200).json({
+            message: "All users retrieved successfully",
+            data: { users: rows },
+            error: null
+        });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: "Internal server error", data: null, error: { code: "INTERNAL_ERROR" } });
+    }
+};

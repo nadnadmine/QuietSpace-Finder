@@ -14,15 +14,15 @@ QuietSpace Finder adalah backend berbasis service untuk membantu pengguna menemu
 | --- | --- |
 | Pertemuan | 9 |
 | Versi milestone | `v0.9.0-tugas9` |
-| Status | Berhasil di-deploy di server LeADS |
-| Gateway (LeADS) | `http://103.147.92.134.sslip.io:33000` |
-| RabbitMQ Mgmt  | `http://103.147.92.134.sslip.io:35673` |
+| Status | Berhasil dikonfigurasi untuk Local/Localhost |
+| Gateway (Local) | `http://localhost:3000` |
+| RabbitMQ Mgmt  | `http://localhost:15672` |
 
 ## Kesesuaian Ketentuan Tugas 9
 
 | Ketentuan | Implementasi di proyek |
 | --- | --- |
-| API Gateway sebagai satu entry point | `gateway` pada port `33000` (host LeADS), meneruskan request ke service internal |
+| API Gateway sebagai satu entry point | `gateway` pada port `3000` (host local), meneruskan request ke service internal |
 | Minimal satu service autentikasi | `auth-service` dengan JWT, refresh token, role user, moderator, admin |
 | Minimal dua service/domain | `auth-service`, `place-service`, `notification-service` |
 | Database service | MySQL dengan database `quietspace_auth`, `quietspace_places`, `quietspace_notifications` |
@@ -33,6 +33,14 @@ QuietSpace Finder adalah backend berbasis service untuk membantu pengguna menemu
 | Response JSON konsisten | Format umum `{ message, data, error }` |
 | Dokumentasi endpoint | Folder `api-spec/` dan koleksi Postman `postman/QuietSpace Finder.postman_collection.json` |
 | Deploy server | Disiapkan untuk clone dan run di LeADS melalui Docker Compose |
+
+## Kesesuaian Ketentuan Tugas 10
+
+| Ketentuan | Implementasi di proyek | Detail Implementasi |
+| --- | --- | --- |
+| **Service A (Node.js/Express) dengan rate limiting** | **`place-service`** (Node.js/Express) | Menerapkan middleware `express-rate-limit` pada [rateLimiter.js](file:///c:/Users/Nadia%20jasmine%20aulia/OneDrive/Desktop/TUGAS%20KULIAH/SEMESTER%204/Pembangunan%20Perangkat%20Lunak%20Berorientasi%20Service/QuietSpace-Finder/services/place-service/src/middleware/rateLimiter.js) dengan konfigurasi `max: 5` request per menit per IP untuk pembatasan global API (`globalApiLimiter`), `max: 3` untuk endpoint sensitif (`strictLimiter`), dan `max: 20` untuk endpoint publik (`readOnlyLimiter`). |
+| **Service B (PHP) terhubung dengan DB** | **`notification-service`** (PHP, CodeIgniter 4) | Menyediakan fitur preferensi dan kotak masuk notifikasi yang terintegrasi secara dinamis dengan database MySQL (`quietspace_notifications`) untuk menyimpan status unread/read dan preference user. |
+| **Integrasi kedua service menggunakan HTTP REST API** | **API Gateway** & **Inter-service routing** | Kedua service diintegrasikan melalui API Gateway berbasis Express (`gateway`) yang merutekan request klien secara dinamis ke upstream service masing-masing via REST API (`http://place-service:3002` dan `http://notification-service:80`). Selain itu, service juga saling terintegrasi dalam arsitektur microservice terdistribusi. |
 
 ## Arsitektur
 
@@ -118,10 +126,10 @@ qs_rabbitmq
 Cek health:
 
 ```powershell
-curl http://103.147.92.134.sslip.io:33000/health
-curl http://103.147.92.134.sslip.io:33001/health
-curl http://103.147.92.134.sslip.io:33002/health
-curl http://103.147.92.134.sslip.io:38080/health
+curl http://localhost:3000/health
+curl http://localhost:3001/health
+curl http://localhost:3002/health
+curl http://localhost:8080/health
 ```
 
 Dashboard RabbitMQ:

@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
     container_name: n2410511045_qs_gateway
     ports:
-      - "33000:3000"
+      - "${GATEWAY_HOST_PORT:-3000}:3000"
     environment:
       - PORT=3000
       - AUTH_SERVICE_URL=http://auth-service:3001
@@ -31,7 +31,7 @@ services:
       dockerfile: Dockerfile
     container_name: n2410511045_qs_auth_service
     ports:
-      - "33001:3001"
+      - "${AUTH_HOST_PORT:-3001}:3001"
     env_file:
       - ./services/auth-service/.env
     volumes:
@@ -52,7 +52,7 @@ services:
       dockerfile: Dockerfile
     container_name: n2410511045_qs_place_service
     ports:
-      - "33002:3002"
+      - "${PLACE_HOST_PORT:-3002}:3002"
     env_file:
       - ./services/place-service/.env
     volumes:
@@ -73,7 +73,7 @@ services:
       dockerfile: Dockerfile
     container_name: n2410511045_qs_notification_service
     ports:
-      - "38080:80"
+      - "${NOTIFICATION_HOST_PORT:-8080}:80"
     env_file:
       - ./services/notification-service/.env
     volumes:
@@ -116,7 +116,7 @@ services:
     image: mysql:8.0
     container_name: n2410511045_qs_mysql
     ports:
-      - "33306:3306"
+      - "${MYSQL_HOST_PORT:-3306}:3306"
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
     volumes:
@@ -136,8 +136,8 @@ services:
     image: rabbitmq:3-management
     container_name: n2410511045_qs_rabbitmq
     ports:
-      - "35672:5672"
-      - "35673:15672"
+      - "${RABBITMQ_HOST_PORT:-5672}:5672"
+      - "${RABBITMQ_MGMT_HOST_PORT:-15672}:15672"
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest

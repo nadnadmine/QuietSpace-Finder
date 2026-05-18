@@ -184,5 +184,5 @@ app.use('/api/notifications', createProxyMiddleware(proxyOptions(NOTIFICATION_SE
 
 // Start Server
 app.listen(PORT, () => {
-    console.log(`🚀 Gateway is running on port ${PORT}`);
+    console.log(`Gateway is running on port ${PORT}`);
 });

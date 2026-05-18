@@ -6,7 +6,7 @@ const {
     globalApiLimiter,
     strictLimiter,
     readOnlyLimiter
-} = require('./middleware/rateLimiter');
+} = require('../middleware/rateLimiter');
 
 const router = express.Router();
 
