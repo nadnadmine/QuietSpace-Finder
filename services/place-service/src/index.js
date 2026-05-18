@@ -3,6 +3,8 @@ const cors = require('cors');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const { placeRouter, bookmarkRouter, tagRouter, reportRouter } = require('./routes/placeRoutes');
+const smartRecommendationsRouter = require('./routes/smartRecommendations');
+const db = require('./db');
 const { connectRabbitMQ } = require('./utils/rabbitmq');
 const {
     globalApiLimiter,
@@ -11,6 +13,7 @@ const {
 } = require('./middleware/rateLimiter');
 
 const app = express();
+app.set('db', db);
 const PORT = process.env.PORT || 3002;
 
 app.use(helmet());
@@ -18,6 +21,7 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 
+app.use('/api/places', smartRecommendationsRouter);
 app.use('/api/places', placeRouter);
 app.use('/api/bookmarks', bookmarkRouter);
 app.use('/api/tags', tagRouter);

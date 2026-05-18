@@ -14,6 +14,7 @@ const PORT = process.env.PORT || 3000;
 const AUTH_SERVICE = process.env.AUTH_SERVICE_URL || 'http://localhost:3001';
 const PLACE_SERVICE = process.env.PLACE_SERVICE_URL || 'http://localhost:3002';
 const NOTIFICATION_SERVICE = process.env.NOTIFICATION_SERVICE_URL || 'http://localhost:8080';
+const ML_SERVICE = process.env.ML_SERVICE_URL || 'http://ml-service:5001';
 
 // Global Middlewares
 app.use(helmet());
@@ -91,7 +92,7 @@ app.get('/health', async (req, res) => {
     // Basic ping check for upstream services with timeout
     const checkService = async (url) => {
         const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 second timeout
+        const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout (to handle slow Windows Docker mounts)
 
         try {
             const start = Date.now();
@@ -126,7 +127,8 @@ app.get('/health', async (req, res) => {
             services: {
                 "auth-service": await checkService(AUTH_SERVICE),
                 "place-service": await checkService(PLACE_SERVICE),
-                "notification-service": await checkService(NOTIFICATION_SERVICE)
+                "notification-service": await checkService(NOTIFICATION_SERVICE),
+                "ml-service": await checkService(ML_SERVICE)
             }
         },
         error: null
@@ -181,6 +183,21 @@ app.use('/api/reports', createProxyMiddleware(proxyOptions(PLACE_SERVICE, '/api/
 
 // Notification Service Routes
 app.use('/api/notifications', createProxyMiddleware(proxyOptions(NOTIFICATION_SERVICE, '/api/notifications')));
+
+app.use('/api/ml', createProxyMiddleware({
+    target: process.env.ML_SERVICE_URL || 'http://ml-service:5001',
+    changeOrigin: true,
+    pathRewrite: { '^/api/ml': '' },
+    on: {
+     error: (err, req, res) => {
+       res.status(503).json({
+         message: 'ML Service tidak tersedia.',
+         data: null,
+         error: { code: 'ML_SERVICE_UNAVAILABLE', details: err.message },
+       });
+     },
+   },
+}));
 
 // Start Server
 app.listen(PORT, () => {

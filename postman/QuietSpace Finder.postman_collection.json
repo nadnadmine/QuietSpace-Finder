@@ -17,7 +17,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"username\": \"nadnadlia\",\r\n    \"email\": \"lyraavg@gmail.com\",\r\n    \"password\": \"nadianad07\",\r\n    \"display_name\": \"Nadia Aulia\"\r\n}",
+              "raw": "{\r\n    \"username\": \"pandusatriav\",\r\n    \"email\": \"pandusatriav07@gmail.com\",\r\n    \"password\": \"viratama9876\",\r\n    \"display_name\": \"Muhammad Pandu Satria Viratama\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -186,15 +186,18 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"email\": \"lyraavg@gmail.com\",\r\n    \"password\": \"nadianad07\"\r\n}"
+              "raw": "{\r\n    \"email\": \"pandusatriav07@gmail.com\",\r\n    \"password\": \"viratama9876\"\r\n}"
             },
             "url": {
-              "raw": "http://localhost:3000/api/auth/login",
+              "raw": "http://103.147.92.134:33000/api/auth/login",
               "protocol": "http",
               "host": [
-                "localhost"
+                "103",
+                "147",
+                "92",
+                "134"
               ],
-              "port": "3000",
+              "port": "33000",
               "path": [
                 "api",
                 "auth",
@@ -511,7 +514,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmMWNlY2UyYi0wMTc3LTQxZDktOTJkYi0yOThmNzQxMWE3MTEiLCJyb2xlIjoidXNlciIsImVtYWlsIjoibHlyYWF2Z0BnbWFpbC5jb20iLCJpYXQiOjE3NzgzMzUzMTcsImV4cCI6MTc3ODMzNjIxN30.jBnGNjQg-8tniPK0_F_REX_Xnne_d9I1xxZupebmSFQ",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZGZjZDBlYS0xNWNlLTQyYjMtYmRiNi0zOWIwNThkZWJhNmEiLCJyb2xlIjoidXNlciIsImVtYWlsIjoicGFuZHVzYXRyaWF2MDdAZ21haWwuY29tIiwiaWF0IjoxNzc5MDY1NDE3LCJleHAiOjE3NzkwNjYzMTd9.Wj8XNw4nmwTCW0rktNg2Cd4xQpcNuLnkhyHeCGBeNFU",
                   "type": "string"
                 }
               ]
@@ -678,7 +681,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmMWNlY2UyYi0wMTc3LTQxZDktOTJkYi0yOThmNzQxMWE3MTEiLCJyb2xlIjoidXNlciIsImVtYWlsIjoibHlyYWF2Z0BnbWFpbC5jb20iLCJpYXQiOjE3NzgzMzUzMTcsImV4cCI6MTc3ODMzNjIxN30.jBnGNjQg-8tniPK0_F_REX_Xnne_d9I1xxZupebmSFQ",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZGZjZDBlYS0xNWNlLTQyYjMtYmRiNi0zOWIwNThkZWJhNmEiLCJyb2xlIjoidXNlciIsImVtYWlsIjoicGFuZHVzYXRyaWF2MDdAZ21haWwuY29tIiwiaWF0IjoxNzc5MDY1NDE3LCJleHAiOjE3NzkwNjYzMTd9.Wj8XNw4nmwTCW0rktNg2Cd4xQpcNuLnkhyHeCGBeNFU",
                   "type": "string"
                 }
               ]
@@ -693,7 +696,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"display_name\": \"Nadia Jasmine Aulia\"\r\n}",
+              "raw": "{\r\n    \"display_name\": \"Pandu Satria\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -868,7 +871,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhOTQ1ODIzYi1mZGQ4LTQ1NWEtODlmYy03NzQwOTI2ZTc3NmQiLCJyb2xlIjoidXNlciIsImVtYWlsIjoibHlyYWF2Z0BnbWFpbC5jb20iLCJpYXQiOjE3NzgzNDA5NzUsImV4cCI6MTc3ODM0MTg3NX0.8wFKnLTLHHIFsox1NsWiM2gSyr--6BlLfrNkFVrBO6M",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZGZjZDBlYS0xNWNlLTQyYjMtYmRiNi0zOWIwNThkZWJhNmEiLCJyb2xlIjoidXNlciIsImVtYWlsIjoicGFuZHVzYXRyaWF2MDdAZ21haWwuY29tIiwiaWF0IjoxNzc5MDY1NDE3LCJleHAiOjE3NzkwNjYzMTd9.Wj8XNw4nmwTCW0rktNg2Cd4xQpcNuLnkhyHeCGBeNFU",
                   "type": "string"
                 }
               ]
@@ -1041,7 +1044,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhOTQ1ODIzYi1mZGQ4LTQ1NWEtODlmYy03NzQwOTI2ZTc3NmQiLCJyb2xlIjoidXNlciIsImVtYWlsIjoibHlyYWF2Z0BnbWFpbC5jb20iLCJpYXQiOjE3NzgzNDA5NzUsImV4cCI6MTc3ODM0MTg3NX0.8wFKnLTLHHIFsox1NsWiM2gSyr--6BlLfrNkFVrBO6M",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZGZjZDBlYS0xNWNlLTQyYjMtYmRiNi0zOWIwNThkZWJhNmEiLCJyb2xlIjoidXNlciIsImVtYWlsIjoicGFuZHVzYXRyaWF2MDdAZ21haWwuY29tIiwiaWF0IjoxNzc5MDY1NDE3LCJleHAiOjE3NzkwNjYzMTd9.Wj8XNw4nmwTCW0rktNg2Cd4xQpcNuLnkhyHeCGBeNFU",
                   "type": "string"
                 }
               ]
@@ -1049,7 +1052,7 @@
             "method": "PATCH",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/notifications/c8c8c0d2-4bbd-11f1-a2a4-ee7cf3424fc4/read",
+              "raw": "http://localhost:3000/api/notifications/b02d5dad-9235-45dc-92eb-94e063e1a5d5/read",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -1058,7 +1061,7 @@
               "path": [
                 "api",
                 "notifications",
-                "c8c8c0d2-4bbd-11f1-a2a4-ee7cf3424fc4",
+                "b02d5dad-9235-45dc-92eb-94e063e1a5d5",
                 "read"
               ]
             }
@@ -1218,7 +1221,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhOTQ1ODIzYi1mZGQ4LTQ1NWEtODlmYy03NzQwOTI2ZTc3NmQiLCJyb2xlIjoidXNlciIsImVtYWlsIjoibHlyYWF2Z0BnbWFpbC5jb20iLCJpYXQiOjE3NzgzNDIwNjIsImV4cCI6MTc3ODM0Mjk2Mn0.bQyajKxiLonmVuQ-YA3Dj7Z0Hfb04Gcj-l2JqrcPBxs",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZTU1NWIxYy01ZGM5LTRjYjMtODEzOC0zZWUxZGZkOWMxZWQiLCJyb2xlIjoidXNlciIsImVtYWlsIjoic3VsaXN0aW9zZXBAZ21haWwuY29tIiwiaWF0IjoxNzc4NDg2Mjk0LCJleHAiOjE3Nzg0ODcxOTR9.N5NHqFyJNl49-q4vQhl56swEzJfuY2LGNU2qMaQkG9c",
                   "type": "string"
                 }
               ]
@@ -1235,12 +1238,17 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/api/notifications/preferences",
+              "raw": "http://103.147.92.134.sslip.io:33000/api/notifications/preferences",
               "protocol": "http",
               "host": [
-                "localhost"
+                "103",
+                "147",
+                "92",
+                "134",
+                "sslip",
+                "io"
               ],
-              "port": "3000",
+              "port": "33000",
               "path": [
                 "api",
                 "notifications",
@@ -1411,7 +1419,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhOTQ1ODIzYi1mZGQ4LTQ1NWEtODlmYy03NzQwOTI2ZTc3NmQiLCJyb2xlIjoidXNlciIsImVtYWlsIjoibHlyYWF2Z0BnbWFpbC5jb20iLCJpYXQiOjE3NzgzNDIwNjIsImV4cCI6MTc3ODM0Mjk2Mn0.bQyajKxiLonmVuQ-YA3Dj7Z0Hfb04Gcj-l2JqrcPBxs",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZTU1NWIxYy01ZGM5LTRjYjMtODEzOC0zZWUxZGZkOWMxZWQiLCJyb2xlIjoidXNlciIsImVtYWlsIjoic3VsaXN0aW9zZXBAZ21haWwuY29tIiwiaWF0IjoxNzc4NDg2Mjk0LCJleHAiOjE3Nzg0ODcxOTR9.N5NHqFyJNl49-q4vQhl56swEzJfuY2LGNU2qMaQkG9c",
                   "type": "string"
                 }
               ]
@@ -1419,12 +1427,17 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/notifications/preferences",
+              "raw": "http://103.147.92.134.sslip.io:33000/api/notifications/preferences",
               "protocol": "http",
               "host": [
-                "localhost"
+                "103",
+                "147",
+                "92",
+                "134",
+                "sslip",
+                "io"
               ],
-              "port": "3000",
+              "port": "33000",
               "path": [
                 "api",
                 "notifications",
@@ -1591,7 +1604,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmMWNlY2UyYi0wMTc3LTQxZDktOTJkYi0yOThmNzQxMWE3MTEiLCJyb2xlIjoidXNlciIsImVtYWlsIjoibHlyYWF2Z0BnbWFpbC5jb20iLCJpYXQiOjE3NzgzMzUzMTcsImV4cCI6MTc3ODMzNjIxN30.jBnGNjQg-8tniPK0_F_REX_Xnne_d9I1xxZupebmSFQ",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxODhjMWFmZC1mNDk0LTQxZDYtYjRmOC1hZjU4MmQ1OGUyODQiLCJyb2xlIjoidXNlciIsImVtYWlsIjoicGFuZHVzYXRyaWF2MDdAZ21haWwuY29tIiwiaWF0IjoxNzc5MDczMTUyLCJleHAiOjE3NzkwNzQwNTJ9.lMOd7e_AB5yXiEjHJoI0Rtdc04ToYFCJZHtxrehWmgM",
                   "type": "string"
                 }
               ]
@@ -1605,12 +1618,15 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:3000/api/places/categories",
+              "raw": "http://103.147.92.134:33000/api/places/categories",
               "protocol": "http",
               "host": [
-                "localhost"
+                "103",
+                "147",
+                "92",
+                "134"
               ],
-              "port": "3000",
+              "port": "33000",
               "path": [
                 "api",
                 "places",
@@ -1758,7 +1774,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmMWNlY2UyYi0wMTc3LTQxZDktOTJkYi0yOThmNzQxMWE3MTEiLCJyb2xlIjoidXNlciIsImVtYWlsIjoibHlyYWF2Z0BnbWFpbC5jb20iLCJpYXQiOjE3NzgzMzUzMTcsImV4cCI6MTc3ODMzNjIxN30.jBnGNjQg-8tniPK0_F_REX_Xnne_d9I1xxZupebmSFQ",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxODhjMWFmZC1mNDk0LTQxZDYtYjRmOC1hZjU4MmQ1OGUyODQiLCJyb2xlIjoidXNlciIsImVtYWlsIjoicGFuZHVzYXRyaWF2MDdAZ21haWwuY29tIiwiaWF0IjoxNzc5MDczMTUyLCJleHAiOjE3NzkwNzQwNTJ9.lMOd7e_AB5yXiEjHJoI0Rtdc04ToYFCJZHtxrehWmgM",
                   "type": "string"
                 }
               ]
@@ -1772,12 +1788,15 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:3000/api/places",
+              "raw": "http://103.147.92.134:33000/api/places",
               "protocol": "http",
               "host": [
-                "localhost"
+                "103",
+                "147",
+                "92",
+                "134"
               ],
-              "port": "3000",
+              "port": "33000",
               "path": [
                 "api",
                 "places"
@@ -1923,7 +1942,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmMWNlY2UyYi0wMTc3LTQxZDktOTJkYi0yOThmNzQxMWE3MTEiLCJyb2xlIjoidXNlciIsImVtYWlsIjoibHlyYWF2Z0BnbWFpbC5jb20iLCJpYXQiOjE3NzgzMzUzMTcsImV4cCI6MTc3ODMzNjIxN30.jBnGNjQg-8tniPK0_F_REX_Xnne_d9I1xxZupebmSFQ",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZGZjZDBlYS0xNWNlLTQyYjMtYmRiNi0zOWIwNThkZWJhNmEiLCJyb2xlIjoidXNlciIsImVtYWlsIjoicGFuZHVzYXRyaWF2MDdAZ21haWwuY29tIiwiaWF0IjoxNzc5MDY1NDE3LCJleHAiOjE3NzkwNjYzMTd9.Wj8XNw4nmwTCW0rktNg2Cd4xQpcNuLnkhyHeCGBeNFU",
                   "type": "string"
                 }
               ]
@@ -2090,7 +2109,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmMWNlY2UyYi0wMTc3LTQxZDktOTJkYi0yOThmNzQxMWE3MTEiLCJyb2xlIjoidXNlciIsImVtYWlsIjoibHlyYWF2Z0BnbWFpbC5jb20iLCJpYXQiOjE3NzgzMzUzMTcsImV4cCI6MTc3ODMzNjIxN30.jBnGNjQg-8tniPK0_F_REX_Xnne_d9I1xxZupebmSFQ",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZGZjZDBlYS0xNWNlLTQyYjMtYmRiNi0zOWIwNThkZWJhNmEiLCJyb2xlIjoidXNlciIsImVtYWlsIjoicGFuZHVzYXRyaWF2MDdAZ21haWwuY29tIiwiaWF0IjoxNzc5MDY1NDE3LCJleHAiOjE3NzkwNjYzMTd9.Wj8XNw4nmwTCW0rktNg2Cd4xQpcNuLnkhyHeCGBeNFU",
                   "type": "string"
                 }
               ]
@@ -3689,12 +3708,15 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/api/auth/register",
+              "raw": "http://103.147.92.134:33000/api/auth/register",
               "protocol": "http",
               "host": [
-                "localhost"
+                "103",
+                "147",
+                "92",
+                "134"
               ],
-              "port": "3000",
+              "port": "33000",
               "path": [
                 "api",
                 "auth",
@@ -3844,7 +3866,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"token\": \"28b214fea6bc740ce6858d8132668893137e6ae7d2ace4198c2a8fdc746f6d2c\"\r\n}",
+              "raw": "{\r\n    \"token\": \"f3b7743e938f46a9b583d7cbd0e2411c3abe33d97a3f4e53678e23742ba4b015\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -3852,12 +3874,15 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/api/auth/verify-email",
+              "raw": "http://103.147.92.134:33000/api/auth/verify-email",
               "protocol": "http",
               "host": [
-                "localhost"
+                "103",
+                "147",
+                "92",
+                "134"
               ],
-              "port": "3000",
+              "port": "33000",
               "path": [
                 "api",
                 "auth",
@@ -4015,12 +4040,15 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/api/auth/login",
+              "raw": "http://103.147.92.134:33000/api/auth/login",
               "protocol": "http",
               "host": [
-                "localhost"
+                "103",
+                "147",
+                "92",
+                "134"
               ],
-              "port": "3000",
+              "port": "33000",
               "path": [
                 "api",
                 "auth",
@@ -4171,7 +4199,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4NTdkZTYxMy02NzNjLTQ3OWItYTUzNS01YzU5OGRhMTVkODMiLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6Im5kYWpzbW5lQGdtYWlsLmNvbSIsImlhdCI6MTc3ODM0MzI5NywiZXhwIjoxNzc4MzQ0MTk3fQ.aYARCbUNay9Gu5HQfA78PCfi4nOsWJ01mtZarJdXemk",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzMDY5YTRiNy1mYmVjLTQwYjMtYTBjNy1hYjNhZTliYzVlNWYiLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6Im5kYWpzbW5lQGdtYWlsLmNvbSIsImlhdCI6MTc3OTA3MzU0OSwiZXhwIjoxNzc5MDc0NDQ5fQ.TBErt1NwAVCdQorJBZakWoNHLCPWT37hauvbJJF612s",
                   "type": "string"
                 }
               ]
@@ -4188,12 +4216,15 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/api/places",
+              "raw": "http://103.147.92.134:33000/api/places",
               "protocol": "http",
               "host": [
-                "localhost"
+                "103",
+                "147",
+                "92",
+                "134"
               ],
-              "port": "3000",
+              "port": "33000",
               "path": [
                 "api",
                 "places"
@@ -4335,7 +4366,7 @@
           ]
         },
         {
-          "name": "New Request",
+          "name": "Hapus Users",
           "request": {
             "auth": {
               "type": "bearer",
@@ -5139,6 +5170,662 @@
               ],
               "cookie": [],
               "body": "{\n    \"message\": \"Logged out successfully\",\n    \"data\": null,\n    \"error\": null\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Machine Learning",
+      "item": [
+        {
+          "name": "Informasi Metadata Model ML",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/api/ml/model-info",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "ml",
+                "model-info"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Informasi Metadata Model ML",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:3000/api/ml/model-info",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "ml",
+                    "model-info"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "X-Request-ID",
+                  "value": "fb8fa280-d2aa-404c-a6f3-e2875c502cf7"
+                },
+                {
+                  "key": "RateLimit-Policy",
+                  "value": "300;w=60"
+                },
+                {
+                  "key": "RateLimit-Limit",
+                  "value": "300"
+                },
+                {
+                  "key": "RateLimit-Remaining",
+                  "value": "299"
+                },
+                {
+                  "key": "RateLimit-Reset",
+                  "value": "60"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 18 May 2026 10:30:44 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "uvicorn"
+                },
+                {
+                  "key": "content-length",
+                  "value": "527"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"algorithm\": \"RandomForestClassifier\",\n    \"n_estimators\": 150,\n    \"n_features\": 10,\n    \"features\": [\n        \"category_id\",\n        \"has_wifi\",\n        \"has_ac\",\n        \"has_parking\",\n        \"avg_report_score\",\n        \"total_bookmarks\",\n        \"total_reports\",\n        \"hour_of_day\",\n        \"day_of_week\",\n        \"capacity_estimate\"\n    ],\n    \"classes\": [\n        \"Ramai\",\n        \"Cukup Tenang\",\n        \"Sangat Tenang\"\n    ],\n    \"label_map\": {\n        \"0\": \"Ramai\",\n        \"1\": \"Cukup Tenang\",\n        \"2\": \"Sangat Tenang\"\n    },\n    \"category_map\": {\n        \"1\": \"Perpustakaan\",\n        \"2\": \"Kafe\",\n        \"3\": \"Taman\",\n        \"4\": \"Coworking Space\",\n        \"5\": \"Kampus\",\n        \"6\": \"Masjid / Tempat Ibadah\"\n    },\n    \"dataset\": \"quiet_places.csv (1200 baris, synthetic)\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Prediksi Skor Ketenangan 1 Tempat",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"features\": {\r\n    \"avg_report_score\": 4.5,\r\n    \"capacity_estimate\": 2,\r\n    \"category_id\": 1,\r\n    \"day_of_week\": 2,\r\n    \"has_ac\": 1,\r\n    \"has_parking\": 0,\r\n    \"has_wifi\": 1,\r\n    \"hour_of_day\": 10,\r\n    \"total_bookmarks\": 87,\r\n    \"total_reports\": 12\r\n  },\r\n  \"place_id\": 42,\r\n  \"place_name\": \"Perpustakaan Kota Bandung\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/ml/predict",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "ml",
+                "predict"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Prediksi Skor Ketenangan 1 Tempat",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"features\": {\r\n    \"avg_report_score\": 4.5,\r\n    \"capacity_estimate\": 2,\r\n    \"category_id\": 1,\r\n    \"day_of_week\": 2,\r\n    \"has_ac\": 1,\r\n    \"has_parking\": 0,\r\n    \"has_wifi\": 1,\r\n    \"hour_of_day\": 10,\r\n    \"total_bookmarks\": 87,\r\n    \"total_reports\": 12\r\n  },\r\n  \"place_id\": 42,\r\n  \"place_name\": \"Perpustakaan Kota Bandung\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/ml/predict",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "ml",
+                    "predict"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "X-Request-ID",
+                  "value": "7355db53-5ea2-4df0-ae13-1193acfa698c"
+                },
+                {
+                  "key": "RateLimit-Policy",
+                  "value": "60;w=60"
+                },
+                {
+                  "key": "RateLimit-Limit",
+                  "value": "60"
+                },
+                {
+                  "key": "RateLimit-Remaining",
+                  "value": "58"
+                },
+                {
+                  "key": "RateLimit-Reset",
+                  "value": "17"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 18 May 2026 10:33:12 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "uvicorn"
+                },
+                {
+                  "key": "content-length",
+                  "value": "284"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"place_id\": 42,\n    \"place_name\": \"Perpustakaan Kota Bandung\",\n    \"category_name\": \"Perpustakaan\",\n    \"quiet_label\": 2,\n    \"quiet_label_text\": \"Sangat Tenang\",\n    \"confidence\": 0.6002,\n    \"probabilities\": {\n        \"Ramai\": 0.1734,\n        \"Cukup Tenang\": 0.2264,\n        \"Sangat Tenang\": 0.6002\n    },\n    \"service\": \"python-ml-fastapi\",\n    \"version\": \"1.0.0\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Prediksi Beberapa Tempat Sekaligus",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"places\": [\r\n    {\r\n      \"features\": {\r\n        \"avg_report_score\": 4.5,\r\n        \"capacity_estimate\": 2,\r\n        \"category_id\": 1,\r\n        \"day_of_week\": 2,\r\n        \"has_ac\": 1,\r\n        \"has_parking\": 0,\r\n        \"has_wifi\": 1,\r\n        \"hour_of_day\": 10,\r\n        \"total_bookmarks\": 87,\r\n        \"total_reports\": 12\r\n      },\r\n      \"place_id\": 42,\r\n      \"place_name\": \"Perpustakaan Kota Bandung\"\r\n    }\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/ml/batch-predict",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "ml",
+                "batch-predict"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Prediksi Beberapa Tempat Sekaligus",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"places\": [\r\n    {\r\n      \"features\": {\r\n        \"avg_report_score\": 4.5,\r\n        \"capacity_estimate\": 2,\r\n        \"category_id\": 1,\r\n        \"day_of_week\": 2,\r\n        \"has_ac\": 1,\r\n        \"has_parking\": 0,\r\n        \"has_wifi\": 1,\r\n        \"hour_of_day\": 10,\r\n        \"total_bookmarks\": 87,\r\n        \"total_reports\": 12\r\n      },\r\n      \"place_id\": 42,\r\n      \"place_name\": \"Perpustakaan Kota Bandung\"\r\n    }\r\n  ]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/ml/batch-predict",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "ml",
+                    "batch-predict"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "X-Request-ID",
+                  "value": "b67d42b8-28cc-49a7-886c-1d330d8ae698"
+                },
+                {
+                  "key": "RateLimit-Policy",
+                  "value": "60;w=60"
+                },
+                {
+                  "key": "RateLimit-Limit",
+                  "value": "60"
+                },
+                {
+                  "key": "RateLimit-Remaining",
+                  "value": "59"
+                },
+                {
+                  "key": "RateLimit-Reset",
+                  "value": "60"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 18 May 2026 10:34:49 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "uvicorn"
+                },
+                {
+                  "key": "content-length",
+                  "value": "366"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"total\": 1,\n    \"results\": [\n        {\n            \"place_id\": 42,\n            \"place_name\": \"Perpustakaan Kota Bandung\",\n            \"category_name\": \"Perpustakaan\",\n            \"quiet_label\": 2,\n            \"quiet_label_text\": \"Sangat Tenang\",\n            \"confidence\": 0.6002,\n            \"probabilities\": {\n                \"Ramai\": 0.1734,\n                \"Cukup Tenang\": 0.2264,\n                \"Sangat Tenang\": 0.6002\n            },\n            \"service\": \"python-ml-fastapi\",\n            \"version\": \"1.0.0\"\n        }\n    ],\n    \"processing_time_ms\": 215.29,\n    \"service\": \"python-ml-fastapi\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Rekomendasi Tempat",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/places/recommendations/smart",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "places",
+                "recommendations",
+                "smart"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Rekomendasi Tempat",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/places/recommendations/smart",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "places",
+                    "recommendations",
+                    "smart"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "content-security-policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "cross-origin-opener-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "cross-origin-resource-policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "origin-agent-cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "referrer-policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-dns-prefetch-control",
+                  "value": "off"
+                },
+                {
+                  "key": "x-download-options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "x-permitted-cross-domain-policies",
+                  "value": "none"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "0"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "X-Request-ID",
+                  "value": "f5c14b20-afcc-4acd-9424-01ab90b94d23"
+                },
+                {
+                  "key": "RateLimit-Policy",
+                  "value": "300;w=60"
+                },
+                {
+                  "key": "RateLimit-Limit",
+                  "value": "300"
+                },
+                {
+                  "key": "RateLimit-Remaining",
+                  "value": "299"
+                },
+                {
+                  "key": "RateLimit-Reset",
+                  "value": "60"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "2004"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"7d4-ZvNPn7tCWXi7fzGJxO1UFR6Bjkk\""
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 18 May 2026 11:20:49 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Rekomendasi tempat berhasil diambil.\",\n    \"data\": {\n        \"places\": [\n            {\n                \"id\": \"bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb\",\n                \"name\": \"Central Library\",\n                \"category_id\": 2,\n                \"description\": null,\n                \"address\": \"Jl. Pustaka 2\",\n                \"city\": \"Bandung\",\n                \"latitude\": \"-6.9000000\",\n                \"longitude\": \"107.6000000\",\n                \"cover_image_url\": null,\n                \"avg_report_score\": \"3.000000\",\n                \"total_bookmarks\": 0,\n                \"total_reports\": 0,\n                \"capacity_estimate\": 2,\n                \"quiet_score\": {\n                    \"label\": 1,\n                    \"label_text\": \"Cukup Tenang\",\n                    \"confidence\": 0.4618,\n                    \"probabilities\": {\n                        \"Ramai\": 0.3838,\n                        \"Cukup Tenang\": 0.4618,\n                        \"Sangat Tenang\": 0.1545\n                    }\n                }\n            },\n            {\n                \"id\": \"cccccccc-cccc-cccc-cccc-cccccccccccc\",\n                \"name\": \"Focus Coworking\",\n                \"category_id\": 3,\n                \"description\": null,\n                \"address\": \"Jl. Kerja 3\",\n                \"city\": \"Surabaya\",\n                \"latitude\": \"-7.2000000\",\n                \"longitude\": \"112.7000000\",\n                \"cover_image_url\": null,\n                \"avg_report_score\": \"3.000000\",\n                \"total_bookmarks\": 0,\n                \"total_reports\": 0,\n                \"capacity_estimate\": 2,\n                \"quiet_score\": {\n                    \"label\": 1,\n                    \"label_text\": \"Cukup Tenang\",\n                    \"confidence\": 0.5003,\n                    \"probabilities\": {\n                        \"Ramai\": 0.339,\n                        \"Cukup Tenang\": 0.5003,\n                        \"Sangat Tenang\": 0.1607\n                    }\n                }\n            },\n            {\n                \"id\": \"dddddddd-dddd-dddd-dddd-dddddddddddd\",\n                \"name\": \"Green Park\",\n                \"category_id\": 4,\n                \"description\": null,\n                \"address\": \"Jl. Alam 4\",\n                \"city\": \"Yogyakarta\",\n                \"latitude\": \"-7.7000000\",\n                \"longitude\": \"110.3000000\",\n                \"cover_image_url\": null,\n                \"avg_report_score\": \"3.000000\",\n                \"total_bookmarks\": 0,\n                \"total_reports\": 0,\n                \"capacity_estimate\": 2,\n                \"quiet_score\": {\n                    \"label\": 1,\n                    \"label_text\": \"Cukup Tenang\",\n                    \"confidence\": 0.4982,\n                    \"probabilities\": {\n                        \"Ramai\": 0.3462,\n                        \"Cukup Tenang\": 0.4982,\n                        \"Sangat Tenang\": 0.1557\n                    }\n                }\n            },\n            {\n                \"id\": \"aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa\",\n                \"name\": \"Silent Cafe\",\n                \"category_id\": 1,\n                \"description\": null,\n                \"address\": \"Jl. Merdeka 1\",\n                \"city\": \"Jakarta\",\n                \"latitude\": \"-6.2000000\",\n                \"longitude\": \"106.8000000\",\n                \"cover_image_url\": null,\n                \"avg_report_score\": \"3.000000\",\n                \"total_bookmarks\": 0,\n                \"total_reports\": 0,\n                \"capacity_estimate\": 2,\n                \"quiet_score\": {\n                    \"label\": 0,\n                    \"label_text\": \"Ramai\",\n                    \"confidence\": 0.4212,\n                    \"probabilities\": {\n                        \"Ramai\": 0.4212,\n                        \"Cukup Tenang\": 0.4079,\n                        \"Sangat Tenang\": 0.1709\n                    }\n                }\n            }\n        ],\n        \"total\": 4,\n        \"ml_service_used\": true,\n        \"ml_processing_ms\": 2444.03,\n        \"fallback_reason\": null\n    },\n    \"error\": null\n}"
             }
           ]
         }
